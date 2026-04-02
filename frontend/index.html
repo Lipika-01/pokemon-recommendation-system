@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéMatch — Battle Style Recommender</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-layer"></div>
+<div class="pokeball-deco"></div>
+
+<header>
+    <div class="logo">
+        <span class="dot"></span>
+        PokéMatch
+    </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">How It Works</a>
+        <a href="#">Pokédex</a>
+        <a href="#">About</a>
+    </nav>
+    <span class="badge">Gen I–IX</span>
+</header>
+
+<main>
+    <div class="left-panel">
+        <p class="eyebrow">AI-Powered Battle Analysis</p>
+        <h1>Find Your<br><span>Perfect</span><br>Pokémon</h1>
+        <p class="desc">
+            Input your ideal stat distribution and our ML model instantly identifies your battle style and recommends the top Pokémon that match your fighting strategy.
+        </p>
+
+        <div class="stat-chips">
+            <div class="chip"><span class="chip-dot hp"></span>HP</div>
+            <div class="chip"><span class="chip-dot atk"></span>Attack</div>
+            <div class="chip"><span class="chip-dot def"></span>Defense</div>
+            <div class="chip"><span class="chip-dot spa"></span>Sp. Attack</div>
+            <div class="chip"><span class="chip-dot spd"></span>Sp. Defense</div>
+            <div class="chip"><span class="chip-dot spe"></span>Speed</div>
+        </div>
+
+        <div class="types-row">
+            <span class="type-tag fire">Fire</span>
+            <span class="type-tag water">Water</span>
+            <span class="type-tag grass">Grass</span>
+            <span class="type-tag psychic">Psychic</span>
+            <span class="type-tag dragon">Dragon</span>
+            <span class="type-tag electric">Electric</span>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <div class="form-card">
+            <p class="form-title">Enter Stats</p>
+            <p class="form-subtitle">Use base stats from 1–255 for each category</p>
+
+            <form id="pokemonForm">
+                <div class="input-grid">
+                    <div class="input-wrap">
+                        <label class="input-label">HP</label>
+                        <input type="number" id="hp" placeholder="e.g. 80" min="1" max="255" required>
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label">Attack</label>
+                        <input type="number" id="attack" placeholder="e.g. 100" min="1" max="255" required>
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label">Defense</label>
+                        <input type="number" id="defense" placeholder="e.g. 75" min="1" max="255" required>
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label">Sp. Attack</label>
+                        <input type="number" id="sp_attack" placeholder="e.g. 90" min="1" max="255" required>
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label">Sp. Defense</label>
+                        <input type="number" id="sp_defense" placeholder="e.g. 85" min="1" max="255" required>
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label">Speed</label>
+                        <input type="number" id="speed" placeholder="e.g. 110" min="1" max="255" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">FIND MY POKÉMON</button>
+            </form>
+
+            <div class="result-box hidden" id="resultBox">
+                <div class="result-header">
+                    <span class="result-label">Battle Style Detected</span>
+                    <span class="style-pill" id="stylePill">-</span>
+                </div>
+                <div class="table-wrap" id="tableWrap"></div>
+            </div>
+
+            <div class="error-box hidden" id="errorBox"></div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-left">
+        Made with <span>♥</span> for Pokemon Trainers · PokéMatch
+    </div>
+    <div class="footer-right">
+        <a href="#">Privacy</a>
+        <a href="#">Source</a>
+        <a href="#">Contact</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
