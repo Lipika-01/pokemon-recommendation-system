@@ -1,6 +1,4 @@
-const API_BASE = "https://your-render-backend-url.onrender.com";
-// Example:
-// const API_BASE = "https://pokemon-backend-xxxx.onrender.com";
+const API_BASE = "https://pokemon-recommendation-system.onrender.com";
 
 const form = document.getElementById("pokemonForm");
 const resultBox = document.getElementById("resultBox");
