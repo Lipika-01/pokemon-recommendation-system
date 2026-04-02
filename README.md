@@ -73,29 +73,8 @@ A new feature **battle_style** is created based on these stats to classify Poké
 - Displays results through web interface  
 
 ---
-
-## 📁 Folder Structure
-pokemon-recommendation-system/
-│
-├── backend/
-│ ├── app.py
-│ ├── knn_model.pkl
-│ ├── scaler.pkl
-│ ├── label_encoder.pkl
-│ └── pokemon_final.csv
-│
-├── templates/
-│ └── index.html
-│
-├── static/
-│ ├── style.css
-│ └── bg.jpg
-│
-├── notebook/
-│ └── pokemon_model.ipynb
-│
-├── README.md
-├── requirements.txt
+Backend: https://pokemon-recommendation-system.onrender.com & Frontend: https://pokemon-recommendation-system.vercel.app
+---
 
 🧾 Conclusion
 Thus, we have successfully implemented a Pokémon Recommendation System using Data Science and Machine Learning techniques. The K-Nearest Neighbors (KNN) algorithm was used to classify Pokémon into different battle styles based on their statistical attributes. Further, a similarity-based approach using Euclidean distance was applied to recommend the most relevant Pokémon to the user. The system was integrated with a Flask-based web interface, making it interactive and user-friendly. The project demonstrates the effective use of data preprocessing, feature engineering, model training, and deployment in building a real-world application.
